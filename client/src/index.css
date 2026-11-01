@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F5F6F8] text-[#111827] antialiased overflow-x-hidden;
+    font-family: 'Manrope', 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold text-[#111827];
+  }
+}
+
+/* Corporate Accent Styles */
+.gradient-accent {
+  background: linear-gradient(135deg, #7047EB 0%, #3478E5 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7047EB 0%, #3478E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  background: #FFFFFF;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #7047EB, #3478E5);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle corporate card elevation */
+.corporate-card {
+  @apply bg-white border border-[#E5E7EB] rounded-xl transition-all duration-300;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.corporate-card:hover {
+  border-color: #D1D5DB;
+  box-shadow: 0 10px 25px -5px rgba(17, 24, 39, 0.07), 0 8px 10px -6px rgba(17, 24, 39, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Custom corporate scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
